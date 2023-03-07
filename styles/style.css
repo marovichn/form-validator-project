@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --success-color: #23cc71;
+    --error-color: #e74c3c;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Signika Negative', sans-serif;
+}
+
+body{
+    background-color: #f9fafb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h2{
+    font-size: 32px;
+    margin: 20px 0 30px 0;
+    text-align: center;
+}
+
+.form{
+    padding: 20px 40px;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    width: 400px;
+}
+
+.form-control{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label{
+    color: #777;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: -5px;
+}
+
+.form-control input{
+    border: 2px solid #f0f0f0;
+    display: block;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input:focus{
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input{
+    border-color: var(--success-color);
+}
+
+.form-control.error input{
+    border-color: var(--error-color);
+}
+
+.form-control.error-big input{
+    border-color: var(--error-color);
+}
+
+.form-control small{
+    color: var(--error-color);
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    visibility: hidden;
+}
+
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form-control.error-big small {
+    visibility: visible;
+    bottom: -18px;
+}
+
+.btn-submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.form button{
+    width: 256px;
+    height: 34px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    border: 0;
+    background-color: #23cc71;
+    color: #f9fafb;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form button:hover{
+  animation-name: btn;
+  animation-duration: 1000ms;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.successed{ 
+    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-left: 100px;
+    padding-bottom: 20px;
+    position: relative;}
+
+   
+@keyframes btn {
+    50%{
+       width: 266px;
+       height: 39px;
+    }
+    100%{
+    width: 256px;
+    height: 34px;}
+    
+}
